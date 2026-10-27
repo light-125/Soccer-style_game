@@ -1,0 +1,86 @@
+<!--
+
+The MIT License
+
+Copyright (c) 2026 light-125
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including and without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABLE CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Copyright (c) 2026 light-125
+
+本ソフトウェアおよび関連する文書のファイル（以下「ソフトウェア」）の複製を取得した全ての人物に対し、以下の条件に従うことを前提に、ソフトウェアを無制限に扱うことを無償で許可します。これには、ソフトウェアの複製を使用、複製、改変、結合、公開、頒布、再許諾、および/または販売する権利、およびソフトウェアを提供する人物に同様の行為を許可する権利が含まれますが、これらに限定されません。
+
+上記の著作権表示および本許諾表示を、ソフトウェアの全ての複製または実質的な部分に記載するものとします。
+
+ソフトウェアは「現状有姿」で提供され、商品性、特定目的への適合性、および権利の非侵害性に関する保証を含むがこれらに限定されず、明示的であるか黙示的であるかを問わず、いかなる種類の保証も行われません。著作者または著作権者は、契約、不法行為、またはその他の行為であるかを問わず、ソフトウェアまたはソフトウェアの使用もしくはその他に取り扱いに起因または関連して生じるいかなる請求、損害賠償、その他の責任について、一切の責任を負いません。
+-->
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="シンプルなサッカー風ゲーム。ほぼPONGのようなゲーム。">
+    <title>サッカー風ゲーム V1</title>
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pelinoleg/CSSformalize@master/css/css-formalize.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSItMjUwMCAtMjUwMCA1MDAwIDUwMDAiPgoJPHRpdGxlPnNvY2NlciBiYWxsPC90aXRsZT4KCTxnIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyNCI+CgkJPGNpcmNsZSBmaWxsPSIjZmZmIiByPSIyMzc2Ii8+CgkJPHBhdGggZmlsbD0ibm9uZSIgZD0ibS0xNjQzLTE3MTYgMTU1IDE1OG0tNTUwIDIzNjRjMjMxIDIzMSA1MzggMTk1IDgyNiAyMDJtLTUyNC0yMDQwYy00OTEgMzUxLTYxMCAxMDY0LTU5MiAxMDYwbTEyMTYtMTAwOGMtNTEgMzczIDg0IDc4MyAzNjQgMTIyMG0tMTA3LTIyODljMTU3LTE1NyA0NjYtMjY3IDg3My0zMjltLTUyOCA0MTEyYy01MCAxMzItMzcgMzE1LTggNTEwbTYyLTM4ODNjMjgyIDMyIDc5MiA3NCAxMTk2IDMwM20tNDA0IDI2NDRjMzEwIDE3MyA2NDkgMjQ3IDEwNjAgMTgwbS0zNDAtMjAwOGMtMjQyIDMzNC01MzQgNjQ1LTg3MiA5MzZtMTEwOS0yMTE5Yy0xMTEtMjA3LTI5Ni0zNzUtNDk5LTUzNG0xMTQ2IDEyODFjMTAwIDMgMTk3IDQ0IDI5MCAxNDFtLTQzOCA0OTVjMTU4IDI5NyAxODEgNzE4IDIwNCAxMTQwIi8+Cgk8L2c+Cgk8cGF0aCBmaWxsPSIjMDAwIiBkPSJtLTE2MjQtMTcwMGMyNDMtMTUzIDQ5OC0zMDMgODU2LTQyNCAxNDEgMTE3IDI1MyAzMDcgMzcyIDQ5Mi0yODggMjc1LTU2MiA1NDQtNzI0IDc1Ni0yNzQtMjUtNDEwLTItNzQwLTYwIDMtMjQ0IDg0LTQ5OSAyMzYtNzY0em0yOTA0LTQwYzI3MSAyNDggNTM3IDQ5OCA3MjQgNzg4LTU1IDI2Mi0xMDUgNTUzLTE4MCA3MDQtMjM0LTM1LTUzNi0xMjUtODIwLTIwMC0xMzgtMzU3LTIzMS02MjUtMzQwLTkyNCAyMTAtMTU2IDQxNy0yOTYgNjE2LTM2OHptLTMyNzMgMzAzM2EyMzc2IDIzNzYgMCAwIDEtMzc4LTEzOTJsNTktN2M1NCAzNDIgMTI0IDY3NCAzMTEgOTI4LTM2IDE3OS0yIDMyMyA1MSA0NTh6bTExOTctMTEyNWMzNjUgNjAgNzE3IDEyMCAxMDYwIDE4MCAxMDYgMzMzIDEyMCA2NjcgMTU2IDEwMDAtMjYzIDIxOC02MjUgMjg3LTk0NCA0MjAtMzcyLTI0MC01MjMtNTA4LTczNi03NjggMTIyLTI4MSAyNTctNTYxIDQ2NC04MzJ6bTMwMTMgNjc4YTIzNzYgMjM3NiAwIDAgMS05MjUgMTE0N2wtMTE2LTVjODQtMTI3IDExNC0yOTcgMTE4LTQ4OCAyMzItMTExIDQ2NC00NjMgNjk2LTc3MiA4NiAzMCAxNTkgNzIgMjI3IDExOHptLTIyODcgMTUyN2EyMzc2IDIzNzYgMCAwIDEtOTkzLTI1MWMxOTkgNzQgMzY3IDE0MyA1NDIgODMgNTMgNzUgMTc2IDEzNCA0NTEgMTY4eiIvPgo8L3N2Zz4K">
+</head>
+<body class="animate__animated animate__bounce animate__flip animate__backInDown animate__pulse">
+    <header class="app-header">
+        <div class="app-header__logo">サッカー風ゲーム</div>
+    </header>
+    <main class="app-main">
+        <section class="game-section">
+            <div id="gameContainer">
+                <canvas id="pongCanvas" width="600" height="400"></canvas>
+                <div id="startScreen" class="overlay">
+                    <h1>サッカー風ゲーム</h1>
+                    <button id="startBtn" class="btn-main">ゲームスタート</button>
+                </div>
+                <div id="gameOverScreen" class="overlay" style="display: none;">
+                    <h1 id="winnerText">YOU WIN!</h1>
+                    <button id="restartBtn" class="btn-main">リスタート</button>
+                </div>
+            </div>
+        </section>
+        <section class="panel-section">
+            <h2>STATS</h2>
+            <div class="stat-monitor">
+                <div class="stat-item">
+                    <span class="stat-item__label">角度</span>
+                    <span id="statAngle" class="stat-item__value">0°</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="app-footer">
+        <p>&copy; </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/light-125/Soccer-style_game@main/src/app.min.js"></script>
+</body>
+</html>
